@@ -107,7 +107,8 @@ var payModule = (function (BrowserEnabled, GestPay, configuration, util) {
 		// similar behavior as an HTTP redirect
 		var gestpay3dUrl = 'https://testecomm.sella.it/pagam/pagam3d.aspx';
 		//after the 3d authentication, gestpay will redirect to this url:
-		var redirectUrl = 'http://localhost:8080/pay-secure.jsp';
+		var baseUrl = util.getCookie('base_url');
+		var redirectUrl = location.origin + baseUrl + 'pay-secure.jsp';
 		document.location.replace(gestpay3dUrl + '?a=' + configuration.shopLogin + '&b=' + VBVRisp + '&c=' + redirectUrl);
 	}
 

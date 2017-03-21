@@ -1,3 +1,8 @@
+<%
+    Cookie cookie = new Cookie("base_url", request.getContextPath());
+    cookie.setMaxAge(60*60);
+    response.addCookie(cookie);
+%>
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.min.css">
@@ -29,7 +34,7 @@
                 <div class="card-content">
                     <div class="media">
                         <div class="media-content">
-                            <form action="/pay" method="POST">
+                            <form action="pay" method="POST">
                                 <input type="hidden" name="item" value="two pineapples">
                                 <input type="hidden" name="amount" value="15">
                                 <input class="button is-primary is-clearfix is-pulled-right" type="submit" value="Buy" />
@@ -55,7 +60,7 @@
                 <div class="card-content">
                     <div class="media">
                         <div class="media-content">
-                            <form action="/pay" method="POST">
+                            <form action="pay" method="POST">
                                 <input type="hidden" name="item" value="Church on Lake">
                                 <input type="hidden" name="amount" value="75">
                                 <input class="button is-primary is-clearfix is-pulled-right" type="submit" value="Buy" />
@@ -81,7 +86,7 @@
                 <div class="card-content">
                     <div class="media">
                         <div class="media-content">
-                            <form action="/pay" method="POST">
+                            <form action="pay" method="POST">
                                 <input type="hidden" name="item" value="Old Computer" />
                                 <input type="hidden" name="amount" value="20" />
                                 <input class="button is-primary is-clearfix is-pulled-right" type="submit" value="Buy" />
