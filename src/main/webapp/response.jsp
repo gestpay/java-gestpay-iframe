@@ -51,7 +51,7 @@
         </b></p>
     </div>
 
-    <a type="button" href="/" class="button is-primary">Back to Home</a>
+    <a type="button" href="index.jsp" class="button is-primary">Back to Home</a>
 </section>
 </body>
 </html>
